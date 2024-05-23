@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .heart {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+        }
+        
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background-color: red;
+            border-radius: 50px 50px 0 0;
+        }
+        
+        .heart:before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        
+        .heart {
+            animation: heartbeat 1.5s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Function to check if today's date matches the desired date
+        function checkDate() {
+            // Desired date (May 24, 2024)
+            var desiredDate = new Date('2024-05-24');
+            // Current date
+            var currentDate = new Date();
+            // Compare dates
+            if (currentDate.toDateString() !== desiredDate.toDateString()) {
+                // Redirect to an error page or display a message
+                window.location.href = 'error.html';
+            }
+        }
+        // Call the checkDate function when the page loads
+        window.onload = checkDate;
+    </script>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Happy Birthday!</h2>
+                        <p class="card-text text-center">Dear Dede,</p>
+                        <p class="card-text" style="text-align: center;">Hai dedeee, Selamat ulang tahun, cinta! Hari ini adalah momen spesial untuk merayakan dede, sosok yang selalu membuat hidup koko lebih berarti setiap hari. Dalam momen indah ini, izinkan koko menyampaikan betapa beruntungnya koko
+                            memiliki dede di hidup koko. Seiring waktu berjalan, dede telah menjadi bagian tak terpisahkan dari hidup koko. Senyum manis dede, tawa riang dede, dan kebaikan hati dede menjadi sinar terang dalam kegelapan. Bersama dede,
+                            koko merasa lebih hidup dan lebih berarti. Dede bukan sekadar dede bagi koko, tapi juga sahabat, dan teman sejati(Mungkin yang itu juga ehheheh). Di hari ulang tahun dede ini, koko ingin mengucapkan terima kasih atas segala
+                            hal yang dede berikan pada koko. Kebahagiaan, cinta, dan dukungan dede tidak pernah tergantikan. Setiap momen bersama dede adalah berkah yang tak ternilai bagi koko. Doa koko sederhana: semoga dede selalu bahagia, sukses, dan
+                            diberkahi dengan cinta yang tak pernah pudar. Semoga setiap langkah dede di masa depan dipenuhi dengan keberhasilan dan kebahagiaan yang tiada tara. Terima kasih atas segala cinta dan kasih sayang yang telah dede berikan kepada
+                            koko. Bersama dede, koko merasa lengkap. Mari kita jalin kenangan indah dan terus melangkah bersama ke depan. Selamat ulang tahun, dede! Koko mencintai dede lebih dari yang bisa koko berikan dalam kata-kata.</p>
+                        <p class="card-text">Maap koko gabisa bikin yang terlalu bagus buat dedee,</p>
+                        <p class="card-text">With My Love Sincerely,</p>
+                        <p class="card-text text-center">Kokomu</p>
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+    </div>
+
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
